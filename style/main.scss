@@ -1,0 +1,363 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+p {
+  line-height: 1.8;
+  color: hsl(236, 13%, 42%);
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  max-width: 1200px;
+  margin: auto;
+  padding-bottom: 1rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem;
+}
+
+.header nav #menu-close {
+  background: transparent;
+  border: none;
+  outline: none;
+  position: absolute;
+  right: 1.25rem;
+  top: 1.25rem;
+  z-index: 99999;
+  cursor: pointer;
+}
+
+.header nav {
+  opacity: 0;
+  z-index: -999;
+  transition: all 0.3s ease-in-out;
+}
+
+.header nav.open {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 75vw;
+  margin: auto;
+  background-color: white;
+  padding: 1.25rem;
+  opacity: 1;
+  z-index: 99999999999;
+}
+
+.header nav ul {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.header nav ul li {
+  margin: 1.5rem 0;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.header nav ul li:hover {
+  color: hsl(5, 85%, 63%);
+}
+
+.header .menu-button button {
+  background: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+main{
+  display: flex;
+  flex-direction: column;
+  section.main{
+  padding: 0rem 1.25rem;
+  margin-bottom: 3.75rem;
+  .img{
+    .mobile{
+      display: block;
+      padding-bottom: 1.25rem;
+    }
+    .dekstop{
+      display: none;
+    }
+  }
+  .txt{
+    h3{
+      font-size: 2.7rem;
+      font-weight:800 ;
+      line-height: 1;
+      padding-bottom: 1.25rem;
+    }
+    .par{
+      p{
+        padding-bottom: 1.25rem;
+      }
+      button{
+          padding: .8rem 2rem;
+          letter-spacing: .2rem;
+          font-size:1rem;
+          font-weight: 700;
+          color: white;
+          border: none;
+          outline: none;
+          background-color: hsl(5, 85%, 63%);
+          transition: all .3s ease-in-out;
+          cursor: pointer;
+      }
+      button:hover{
+        background-color: black;
+      }
+    }
+  }
+}
+section.sidbar{
+  
+  padding: 0rem 1.25rem;
+  .sidbar{
+    padding: 2rem 1.5rem;
+    background-color:hsl(240, 100%, 5%);
+    h2{
+      color: hsl(35, 77%, 62%);
+      font-weight: 800;
+      font-size: 2.2rem;
+    }
+    .box{ 
+      padding-bottom:2.5rem;
+      padding-top: 2.5rem;
+      h3{
+        color: hsl(36, 100%, 99%);
+        padding-bottom: 1rem;
+        font-size: 1.36rem;
+        cursor: pointer;  
+      }
+      h3:hover{
+        color: hsl(35, 77%, 62%);
+      }
+      p{
+        color: hsl(233, 8%, 79%);
+      }
+    }
+    .a{
+      border-bottom: 1px solid hsl(233, 8%, 79%) ;
+    }
+  }
+}
+
+}
+
+@media (min-width: 1150px) {
+  .header {
+    padding: 2rem 1.25rem;
+  }
+
+  .header nav {
+    opacity: 1;
+    z-index: auto;
+    width: 100%;
+  }
+
+  .header nav.open {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: auto;
+    background-color: transparent;
+    padding: 0;
+    z-index: auto;
+  }
+
+  .header nav #menu-close {
+    display: none;
+  }
+
+  .header nav ul {
+    position: relative;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2rem;
+    transform: translateY(0%);
+  }
+
+  .header nav ul li {
+    margin: 0;
+  }
+
+  .header .menu-button button {
+    display: none;
+  }
+ main{
+  display: flex;
+  flex-direction: row;
+  section.main{
+    .img{
+      .mobile{
+        display: none;
+        padding-bottom: 1.25rem !important;
+      }
+      .dekstop{
+        display: block;
+      }
+    }
+      div.txt{
+    display: flex;
+    align-items: center;
+    margin-top: 2rem !important;
+  }
+  h3{
+    padding-right: 3rem !important;
+    font-size: 4rem !important;
+    // width: 29rem !important;
+  }
+  .par{
+    padding-right: .25rem !important;
+    button{
+      padding: 1rem 2rem !important;
+    }
+  }
+  p{
+    width: 27rem;
+    line-height: 1.6;
+    padding-top: 0.25rem !important;
+    font-size: 1.2rem;
+    padding-bottom: 2.4rem !important;
+  }
+  }
+
+ }
+ section.sidbar{
+  padding: 0rem 1.25rem !important;
+  padding-left: 0.1rem !important;
+  .sidbar{
+    padding: 1.3rem 1.4rem !important;
+    // width: 22.5rem;
+    h2{
+      font-size: 2.4rem;
+    }
+    .box{ 
+      padding-bottom: 1.35rem !important;
+      padding-top: 1.35rem !important;
+      h3{
+        padding-bottom: 1rem !important;
+        padding-top: 1rem;
+      }
+      p{
+        padding-bottom: 1rem;
+      }
+    }
+    .c{
+      padding-bottom: 0.25rem !important;
+    }
+  }
+}
+ }
+
+ //footer section 
+ footer{
+  display: flex;
+  flex-direction: column;
+  padding: 1.2rem;
+  margin-top: 2.5rem;
+
+  .item{
+    display: flex;
+    margin-bottom: 2rem;
+  img{
+      width:6.25rem;
+      height: 8rem;
+    }
+    .textwrapper{
+      padding-left: 1.5rem;
+      h3{
+        font-size: 2rem;
+        color:hsl(233, 8%, 79%) ;
+        padding-bottom: 0.5rem;
+      }
+      h2{
+        font-size: 1.2rem;
+        font-weight: 800;
+        padding-bottom: .5rem;
+        cursor: pointer;
+      &:hover{
+      color: hsl(5, 85%, 63%) ;
+      }
+      }
+      p{
+        line-height: 1.6;
+        font-weight: 400;
+        color: hsl(236, 13%, 42%);
+      }
+    }
+  }
+}
+@media screen and (min-width:1150px){
+  footer{
+    display: flex;
+    flex-direction: row;
+    padding: 1.2rem;
+    margin-top: 1.5rem;
+  
+    .item{
+      display: flex;
+      margin-bottom: 2rem;
+      width: 100%;
+      position: relative;
+    img{
+        width:125px;
+        height:145px;
+      }
+      .textwrapper{
+        padding-left: 1.5rem;
+        padding-right: 1.1rem;
+        h3{
+          font-size: 2.25rem;
+          color:hsl(233, 8%, 79%) ;
+          padding-bottom: 0.5rem;
+        }
+        h2{
+          font-size: 1.35rem;
+          font-weight: 800;
+          padding-bottom: .5rem;
+        }
+        p{
+        font-size: 1.15rem;
+          line-height: 1.6;
+          font-weight: 400;
+          color: hsl(236, 13%, 42%);
+        }
+      }
+    }
+  }
+
+}
+.i2{
+  left:1rem;
+}
+.i3{
+  left:2.3rem;
+}
