@@ -9,3 +9,5 @@ openMenu.addEventListener("click", () => {
 closeMenu.addEventListener("click", () => {
   navbar.classList.remove("open");
 });
+
+console.log('test');
